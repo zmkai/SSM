@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="book_manage.mappers.RoleMapper">
+
+    <select id="getRole" parameterType="int" resultType="book_manage.pojo.Role">
+        select id,role_name as roleName,note from t_role where id = #{id}
+    </select>
+
+    <!--<insert id="insertRole" parameterType="book_manage.pojo.Role">-->
+        <!--insert into t_role values(#{role.id},#{role.name},#{role.note})-->
+    <!--</insert>-->
+
+</mapper>
